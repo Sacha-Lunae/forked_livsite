@@ -20,6 +20,24 @@ body {
   height:1440px;
 }
 
+/* baseline (DITTOORG) */
+.ditto{
+  width: 320px;
+  height: 200px;
+  /* 👇 600 ms so it’s leisurely enough to see, but feel free to match Figma’s exact timing */
+  transition:
+    transform 600ms cubic-bezier(.22,1.61,.36,1),   /* spring-ish overshoot */
+    background 600ms cubic-bezier(.22,1.61,.36,1),
+    border-radius 600ms cubic-bezier(.22,1.61,.36,1);
+}
+
+/* target frame (DITTOORG2) */
+.ditto.state2{
+  transform:scale(1.08) rotate(6deg);
+  border-radius:40px;
+}
+
+
 .corner-ripples {
   position: absolute;
   top: 10px;
